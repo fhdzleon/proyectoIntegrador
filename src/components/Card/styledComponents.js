@@ -27,7 +27,7 @@ export const Linea = styled.div `
 export const Contenedor = styled.div `
     position: relative;
     width: 350px;
-    height: 600px;
+    height: 550px;
     border: 4px solid #424632;
     border-radius: 15px;
     background-color: #97CE4C;

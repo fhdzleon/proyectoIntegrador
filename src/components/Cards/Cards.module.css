@@ -1,10 +1,13 @@
 .cards {
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     border: 2px solid #424632;
     background-image: url(../../images/fondoRM-transformed.jpeg);
     background-size: cover;
     background-attachment: fixed;
+   position: relative;
+   z-index: 1;
 }
