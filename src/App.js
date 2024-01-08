@@ -1,36 +1,47 @@
-import './App.css';
-import { useState } from 'react';
-import Cards from './components/Cards/Cards.jsx';
-import Nav from './components/NavBar/Nav.jsx';
+import "./App.css";
+import axios from "axios";
+import { useState } from "react";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/NavBar/Nav.jsx";
+ 
 
 function App() {
-   const example = {
-      id: 1,
-      name: 'Rick Sanchez',
-      status: 'Alive',
-      species: 'Human',
-      gender: 'Male',
-      origin: {
-         name: 'Earth (C-137)',
-         url: 'https://rickandmortyapi.com/api/location/1',
-      },
-      image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-   };
+  const [characters, setCharacters] = useState([]);
 
-   const [characters, setCharacters] = useState([]);
-   
-   const onSearch = () => {
-      setCharacters ([...characters, example])
+  const onClose = (id) => {
+    const parseId = parseInt(id);
+
+    const filteredCharacters = characters.filter((char) => char.id !== parseId);
+
+    setCharacters(filteredCharacters);
+  };
+
+function onSearch(id) {
+
+   const parseId = parseInt(id);
+
+   if(characters.find(char=>char.id===parseId)) {
+      window.alert('El personaje ya se esta mostrando!');
+      return;
    }
 
-   return (
-      <div className='App'>
+    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
+      ({ data }) => {
+        if (data.name) {
+          setCharacters((oldChars) => [...oldChars, data]);
+        } else {
+          window.alert("¡No hay personajes con este ID!");
+        }
+      }
+    );
+  }
 
-         <Nav onSearch={onSearch}/>
-         <Cards characters={characters} />
-        
-      </div>
-   );
+  return (
+    <div className="App">
+      <Nav onSearch={onSearch} />
+      <Cards onClose={onClose} characters={characters} />
+    </div>
+  );
 }
 
 export default App;
