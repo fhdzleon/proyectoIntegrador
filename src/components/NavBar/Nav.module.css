@@ -7,4 +7,29 @@
     background-color: #FB6467FF;
       position: fixed;
       z-index: 2;
+      
+ }
+
+ .botonAbout {
+  height: 40px;
+  width: 80px;
+  margin-left: 7px;
+  margin-right: 600px;
+  border-radius: 20px;
+  background-color: #526E2DFF;
+  color: white;
+  border: 2px solid #FAFD7CFF;
+  cursor: pointer;
+ }
+
+ .botonHome {
+  height: 40px;
+  width: 80px;
+  margin-left: 7px;
+  margin-right: 7px;
+  border-radius: 20px;
+  background-color: #526E2DFF;
+  color: white;
+  border: 2px solid #FAFD7CFF;
+  cursor: pointer;
  }

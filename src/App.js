@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/NavBar/Nav.jsx";
-import { Routes, Route} from "react-router-dom";
+ 
  
 
 function App() {
@@ -38,9 +38,10 @@ function onSearch(id) {
   }
 
   return (
+
     <div className="App">
       <Nav onSearch={onSearch} />
-      <Cards onClose={onClose} characters={characters} />
+      <Cards onClose={onClose} characters={characters} /> 
     </div>
   );
 }

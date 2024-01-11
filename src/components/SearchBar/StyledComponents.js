@@ -11,4 +11,9 @@ export const Boton = styled.button`
   height: 40px;
   width: 80px;
   margin-right: 30px;
+  border-radius: 20px;
+  background-color: #526E2DFF;
+  color: white;
+  border: 2px solid #FAFD7CFF;
+  cursor: pointer;
 `;

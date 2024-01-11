@@ -4,10 +4,10 @@ export const Close = styled.button `
     position: absolute;
     top: -10px;
     left: -10px;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     color: #97CE4C;
-    font-size: 30px;
+    font-size: 20px;
     background-color: #015B04;
     border-radius: 99px;
     cursor: pointer;
@@ -26,8 +26,8 @@ export const Linea = styled.div `
 
 export const Contenedor = styled.div `
     position: relative;
-    width: 350px;
-    height: 550px;
+    width: 250px;
+    height: 450px;
     border: 4px solid #424632;
     border-radius: 15px;
     background-color: #97CE4C;
@@ -56,7 +56,7 @@ export const CardInfo = styled.h2 `
 `
 
 export const Image = styled.img `
-    width: 80%;
+    width: 50%;
     border-radius: 90px;
     border: 3px solid #424632;
     margin-bottom: 15px;
