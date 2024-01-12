@@ -1,10 +1,13 @@
+/* Estilos de el random button */
+
 .boton {
   height: 40px;
   width: 80px;
-  margin-right: 20px;
+  
   border-radius: 20px;
-  background-color: #526E2DFF;
+  background-color: #02AFC5;
   color: white;
-  border: 2px solid #FAFD7CFF;
+  border: 1px solid black;
   cursor: pointer;
+  font-weight: bold;
 }

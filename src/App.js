@@ -1,47 +1,28 @@
 import "./App.css";
-import axios from "axios";
-import { useState } from "react";
-import Cards from "./components/Cards/Cards.jsx";
+
+import { Routes, Route } from "react-router-dom"; 
 import Nav from "./components/NavBar/Nav.jsx";
- 
+
+import About from "./views/About.jsx"
+import Detail from "./views/Detail.jsx"
+import Home from "./views/Home.jsx"
  
 
 function App() {
-  const [characters, setCharacters] = useState([]);
-
-  const onClose = (id) => {
-    const parseId = parseInt(id);
-
-    const filteredCharacters = characters.filter((char) => char.id !== parseId);
-
-    setCharacters(filteredCharacters);
-  };
-
-function onSearch(id) {
-
-   const parseId = parseInt(id);
-
-   if(characters.find(char=>char.id===parseId)) {
-      window.alert('El personaje ya se esta mostrando!');
-      return;
-   }
-
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
-      ({ data }) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert("¡No hay personajes con este ID!");
-        }
-      }
-    );
-  }
-
+   
   return (
-
     <div className="App">
-      <Nav onSearch={onSearch} />
-      <Cards onClose={onClose} characters={characters} /> 
+      <Nav />
+      <Routes>
+
+        <Route path="/home" element={<Home/>} />
+
+        <Route path="/about" element={<About/>} />
+      
+        <Route path="/detail/:id" element={<Detail/>} />
+
+      </Routes>
+ 
     </div>
   );
 }

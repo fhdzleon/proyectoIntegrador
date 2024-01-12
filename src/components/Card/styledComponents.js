@@ -26,7 +26,7 @@ export const Linea = styled.div `
 
 export const Contenedor = styled.div `
     position: relative;
-    width: 250px;
+    width: 300px;
     height: 450px;
     border: 4px solid #424632;
     border-radius: 15px;
@@ -56,7 +56,7 @@ export const CardInfo = styled.h2 `
 `
 
 export const Image = styled.img `
-    width: 50%;
+    width: 70%;
     border-radius: 90px;
     border: 3px solid #424632;
     margin-bottom: 15px;

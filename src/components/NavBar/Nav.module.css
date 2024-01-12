@@ -1,35 +1,28 @@
  .contenedor {
     display: flex;
-    justify-content: right;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background-color: #FB6467FF;
       position: fixed;
       z-index: 2;
       
  }
 
- .botonAbout {
-  height: 40px;
-  width: 80px;
-  margin-left: 7px;
-  margin-right: 600px;
-  border-radius: 20px;
-  background-color: #526E2DFF;
-  color: white;
-  border: 2px solid #FAFD7CFF;
-  cursor: pointer;
+ .image {
+  height: 90px;
  }
+ 
 
- .botonHome {
+ .boton {
   height: 40px;
   width: 80px;
-  margin-left: 7px;
-  margin-right: 7px;
+    
   border-radius: 20px;
-  background-color: #526E2DFF;
+  background-color: #02AFC5;
   color: white;
-  border: 2px solid #FAFD7CFF;
+  border: 1px solid black;
   cursor: pointer;
+  font-weight: bold;
  }
