@@ -4,7 +4,7 @@ import style from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import logoImage from "./klipartz.png";
 
-export default function Nav({ onSearch }) {
+export default function Nav({ onSearch, logOut }) {
     return (
         <div className={style.contenedor}>
             <Link to="/home"><button className={style.boton}>Home</button></Link>
@@ -12,7 +12,8 @@ export default function Nav({ onSearch }) {
             <img className={style.image} src={logoImage} alt="logo"/>
             <SearchBar onSearch={onSearch}></SearchBar>
             <RandomButton onSearch={onSearch} />
-        </div>
+            <button onClick={logOut} className={style.boton}>Salir</button>        
+            </div>
     )
 }
 

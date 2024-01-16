@@ -8,9 +8,11 @@ export default function Card(props) {
     <Contenedor>
        <Close onClick={()=> onClose(id)} >x</Close>
       <NameTitulo> {name}</NameTitulo>
+
       <Link to={`/detail/${id}`}>
       <Image src={image} alt="" />
       </Link>
+      
       <Linea><Item>Status:  </Item><CardInfo>{status}</CardInfo></Linea> 
       <Linea><Item>Specie:  </Item><CardInfo>{species}</CardInfo></Linea>
      

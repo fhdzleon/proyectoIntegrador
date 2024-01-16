@@ -1,0 +1,45 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 400px;
+  border: 5px solid white;
+  background-color: rgba(36, 202, 61, 0.90);
+  border-top: none;
+}
+
+
+.label {
+    display:flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    
+}
+
+.label input {
+    width: 200px;
+    height: 25px;
+}
+
+.submit {
+    margin-top: 12px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.welcome {
+    color: white;
+    border: 5px solid white;
+    width: 400px;
+    height: 250px;
+    background-color: rgba(130, 98, 59, 0.9);
+    border-bottom: none;
+}
+
+.error {
+    color: red;
+    display:block;
+    font-size: small;
+}

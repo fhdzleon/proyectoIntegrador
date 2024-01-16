@@ -1,0 +1,11 @@
+.contenedor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #424632;
+    background-image: url(../images/casa.png);
+    background-size: cover;
+    background-attachment: fixed;
+}

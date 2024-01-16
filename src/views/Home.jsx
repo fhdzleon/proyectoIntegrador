@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import Cards from "../components/Cards/Cards.jsx";
 import Nav from "../components/NavBar/Nav.jsx";
+ 
 
-const Home = () => {
+const Home = ({logOut}) => {
 
     const [characters, setCharacters] = useState([]);
 
@@ -37,9 +38,10 @@ const Home = () => {
   
     return (
       <div className="App">
-        <Nav onSearch={onSearch} />
+        <Nav logOut={logOut} onSearch={onSearch} />
         
         <Cards onClose={onClose} characters={characters} /> 
+        
       </div>
     );
   }
