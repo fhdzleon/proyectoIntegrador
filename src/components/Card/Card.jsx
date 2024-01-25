@@ -8,6 +8,7 @@ import {
   NameTitulo,
   Item,
   Linea,
+  Id,
 } from "./styledComponents";
 import { Link, useLocation } from "react-router-dom";
 import { addFav, removeFav } from "../../redux/actions";
@@ -57,7 +58,7 @@ export default function Card(props) {
       <Link to={`/detail/${id}`}>
         <Image src={image} alt="" />
       </Link>
-
+      <Id>#{id}</Id>
       
       <Linea>
         <Item>Specie: </Item>

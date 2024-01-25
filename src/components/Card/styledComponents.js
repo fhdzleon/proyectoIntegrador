@@ -74,3 +74,19 @@ export const Image = styled.img `
     border: 3px solid #424632;
     margin-bottom: 15px;
 `
+
+export const Id = styled.div `
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    left: 0px;
+    height: 30px;
+    width: 60px;
+    color: white;
+    font-size: 15px;
+    background-color: #015B04;
+    cursor: pointer; 
+    
+`
