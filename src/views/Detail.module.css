@@ -68,4 +68,10 @@
     cursor: pointer;
     font-weight: bold;
     margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.boton:hover {
+    border: 2px solid black;
 }

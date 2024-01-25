@@ -11,21 +11,20 @@ import logo3 from "../images/js.png"
 import logo4 from "../images/react.png"
 
 import exito from "../images/exito.png"
+import perfil from "../images/perfil.jpg"
 
 
 const About = () => {
   return (
     <div className={style.contenedor}>
-
+     
       <div className={style.about} >
-
+       <img className={style.fotoPerfil} src={perfil} alt="Alastor" />
         <div className={style.titulo}>
         <h1 className={style.name}>Felipe Hernández Díaz de León</h1>
         <hr/>
         <h2>Front end developer en proceso</h2>
         </div>
-        
-        
         <p>
           ¡Bienvenido a mi app! Soy un apasionado estudiante de la carrera de
           Full Stack Developer con 41 años de edad, radicando en México. Mi

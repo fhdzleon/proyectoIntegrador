@@ -8,15 +8,16 @@
     background-image: url(../images/sala.jpg);
     background-size: cover;
     background-attachment: fixed;
-  
+    padding-top: 10px; 
 }
 
 .titulo {
     color: white;
-    border: 3px solid white;
+    
 }
 
 .about {
+
     padding:20px 35px;
     width: 30%;
     background-color: rgba(134, 137,93, 0.95);
@@ -31,4 +32,8 @@
 
 .iconos img {
     height: 60px;
+}
+
+.fotoPerfil {
+    height: 85px;
 }

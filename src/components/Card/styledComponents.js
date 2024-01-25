@@ -2,21 +2,34 @@ import styled from "styled-components";
 
 export const Close = styled.button `
     position: absolute;
-    top: -10px;
-    left: -10px;
-    height: 30px;
-    width: 30px;
-    color: #97CE4C;
-    font-size: 20px;
+    top: -5px;
+    left: -5px;
+    height: 35px;
+    width: 35px;
+    color: white;
+    font-size: 15px;
     background-color: #015B04;
     border-radius: 99px;
     cursor: pointer;
    
     &:hover {
-        color: white;
+        color: red;
     }
     
 `
+export const Fav = styled.button `
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    height: 35px;
+    width: 35px;
+    color: #97CE4C;
+    font-size: 15px;
+    background-color: #015B04;
+    border-radius: 99px;
+    cursor: pointer;    
+`
+
 
 export const Linea = styled.div `
     

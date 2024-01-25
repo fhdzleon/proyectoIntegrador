@@ -1,13 +1,19 @@
- .contenedor {
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 70px;
-    background-color: #FB6467FF;
-      position: fixed;
-      z-index: 2;
-      
+    background-color: #FB6467FF;  
+    z-index: 3;
  }
 
  .image {
@@ -18,7 +24,6 @@
  .boton {
   height: 40px;
   width: 80px;
-    
   border-radius: 20px;
   background-color: #02AFC5;
   color: white;
@@ -26,3 +31,26 @@
   cursor: pointer;
   font-weight: bold;
  }
+
+ .searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 50px;
+  background-color: rgba(83, 236, 236, 0.8);
+ }
+
+.searchBar input {
+  margin: 0 10px;
+}
+
+ .searchBar button {
+  margin: 0 10px;
+ }
+
+
+ 
+
+ 

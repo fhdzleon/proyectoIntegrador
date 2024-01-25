@@ -30,7 +30,10 @@ const Detail = () => {
           <div className={style.linea}><h2 className={style.args}>ESPECIE  |  </h2><h1 className={style.info}>{character.species}</h1></div>
           <div className={style.linea}><h2 className={style.args}>GENERO  |  </h2><h1 className={style.info}>{character.gender}</h1></div>
           <div className={style.linea}><h2 className={style.args}>ORIGEN  |  </h2><h1 className={style.info}>{character.origin?.name}</h1></div>
-        <Link to="/home"><button className={style.boton}>Regresar</button></Link>
+        <Link to="/home"><button className={style.boton}>Ir a home </button></Link>
+      
+        <Link to="/favorites"><button className={style.boton}> Ir a favs</button></Link>
+
         </div>
           <img className={style.image} src={character.image} alt="idimage"/>
         </div>

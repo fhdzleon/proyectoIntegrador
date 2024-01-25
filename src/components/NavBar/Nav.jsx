@@ -1,20 +1,36 @@
 import SearchBar from "../SearchBar/SearchBar";
-import RandomButton from "../RandomButton/RandomButton";
 import style from "./Nav.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoImage from "./klipartz.png";
 
 export default function Nav({ onSearch, logOut }) {
-    return (
-        <div className={style.contenedor}>
-            <Link to="/home"><button className={style.boton}>Home</button></Link>
-            <Link to="/about"><button className={style.boton}>About</button></Link>
-            <img className={style.image} src={logoImage} alt="logo"/>
+  const location = useLocation();
+
+  return (
+    <>
+      <div className={style.contenedor}>
+        <div className={style.nav}>
+          <Link to="/home">
+            <button className={style.boton}>Home</button>
+          </Link>
+          <Link to="/about">
+            <button className={style.boton}>About</button>
+          </Link>
+          <img className={style.image} src={logoImage} alt="logo" />
+          <Link to="/favorites">
+            <button className={style.boton}>Favoritos</button>
+          </Link>
+          <button onClick={logOut} className={style.boton}>
+            Salir
+          </button>
+        </div>
+
+        {location.pathname === "/home" ? (
+          <div className={style.searchBar}>
             <SearchBar onSearch={onSearch}></SearchBar>
-            <RandomButton onSearch={onSearch} />
-            <button onClick={logOut} className={style.boton}>Salir</button>        
-            </div>
-    )
+          </div>
+        ) : undefined}
+      </div>
+    </>
+  );
 }
-
-
