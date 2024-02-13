@@ -10,6 +10,7 @@ const Home = ( {onClose, characters} ) => {
         
       </div>
     );
+  
   }
   
   export default Home;

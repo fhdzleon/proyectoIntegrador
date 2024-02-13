@@ -8,7 +8,7 @@ const Detail = () => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    //axios(`https://rickandmortyapi.com/api/character/${id}`).then( --Api Externo
+   // axios(`https://rickandmortyapi.com/api/character/${id}`).then( 
     axios(`http://localhost:3001/rickandmorty/character/${id}`).then(  
       ({ data }) => {
         if (data.name) {
@@ -16,6 +16,7 @@ const Detail = () => {
         } else {
           window.alert("No hay personajes con ese ID");
         }
+        console.log(character)
       }
     );
     return setCharacter({});
@@ -30,7 +31,8 @@ const Detail = () => {
           <div className={style.linea}><h2 className={style.args}>STATUS  |  </h2><h1 className={style.info}>{character.status}</h1></div>
           <div className={style.linea}><h2 className={style.args}>ESPECIE  |  </h2><h1 className={style.info}>{character.species}</h1></div>
           <div className={style.linea}><h2 className={style.args}>GENERO  |  </h2><h1 className={style.info}>{character.gender}</h1></div>
-          <div className={style.linea}><h2 className={style.args}>ORIGEN  |  </h2><h1 className={style.info}>{character.origin?.name}</h1></div>
+         {/* <div className={style.linea}><h2 className={style.args}>ORIGEN  |  </h2><h1 className={style.info}>{character.origin?.name }</h1></div>  API EXTERNO USAR ESTA LINEA Y COMENTAR LA DE ABAJO*/}
+          <div className={style.linea}><h2 className={style.args}>ORIGEN  |  </h2><h1 className={style.info}>{character.origin }</h1></div> 
         <Link to="/home"><button className={style.boton}>Ir a home </button></Link>
       
         <Link to="/favorites"><button className={style.boton}> Ir a favs</button></Link>

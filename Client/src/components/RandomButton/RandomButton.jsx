@@ -9,7 +9,7 @@ export default function RandomButton({ onSearch }) {
   
     const handleRandomClick = () => {
        
-      const randomId = (Math.floor(Math.random() * 5)+1).toString();
+      const randomId = (Math.floor(Math.random() * 826)+1).toString();
 
       //Usando el api local el numero por el que multiplicamos cambia por el numero de datos que tenga
       // En el api externo son 826

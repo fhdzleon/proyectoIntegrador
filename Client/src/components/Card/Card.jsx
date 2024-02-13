@@ -18,6 +18,7 @@ export default function Card(props) {
   const { id, name, species, image, onClose, gender } = props;
 
   const location = useLocation();
+  
 
   const dispatch = useDispatch();
   const myFavorites = useSelector(state => state.myFavorites)
@@ -42,10 +43,16 @@ export default function Card(props) {
     }
   };
 
+  const handleClose = () => {
+    console.log("Cerrando", id)
+    onClose(id)
+     
+  }
+
   return (
     <Contenedor>
        { location.pathname === "/home" ? 
-      <Close onClick={() => onClose(id)}>✖</Close> :
+      <Close onClick={handleClose}>✖</Close> :
       undefined
        }
       {isFav ? (

@@ -83,7 +83,19 @@
       },
       image: 'https://i.ibb.co/vZwvcgn/gorickyourself-1.jpg',
    },
+   {
+      id: 8,
+      name: 'Pickle Rick',
+      status: 'Alive',
+      species: 'Unknown',
+      gender: 'Male',
+      origin: {
+         name: 'Earth (C-137)',
+         url: 'https://rickandmortyapi.com/api/location/20',
+      },
+      image: 'https://rickandmortyapi.com/api/character/avatar/265.jpeg',
+   },
 ];
 
 module.exports =
-characters;
+characters; 

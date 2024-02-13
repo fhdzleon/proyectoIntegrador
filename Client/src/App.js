@@ -41,12 +41,11 @@ function onSearch(id) {
      return;
   }
 
-   //axios(`https://rickandmortyapi.com/api/character/${id}`).then( // Para el Api externo
+  // axios(`https://rickandmortyapi.com/api/character/${id}`).then( // Para el Api externo
    axios(`http://localhost:3001/rickandmorty/character/${id}`).then( 
      ({ data }) => {
        if (data.name) {
          setCharacters((oldChars) => [...oldChars, data]);
-         console.log(characters)
        } else {
          window.alert("¡No hay personajes con este ID!");
        }
